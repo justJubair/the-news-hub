@@ -56,14 +56,18 @@ const Navbar = () => {
             ))}
           </Box>
           <Box>
-            <Stack direction="row">
-            <IconButton className="text-white" aria-label="facebook">
+            <Stack sx={{
+                "& svg": {
+                    color: "white"
+                }
+            }} direction="row">
+            <IconButton  aria-label="facebook">
               <FacebookIcon />
             </IconButton>
-            <IconButton className="text-white" aria-label="instagram">
+            <IconButton  aria-label="instagram">
               <InstagramIcon />
             </IconButton>
-            <IconButton className="text-white" aria-label="twitter">
+            <IconButton  aria-label="twitter">
               <TwitterIcon />
             </IconButton>
             </Stack>
