@@ -44,7 +44,7 @@ const navLinks = [
 
 const Navbar = () => {
   return (
-    <AppBar className="bg-black" position="static">
+    <AppBar className="bg-[#300808]" position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Image src={logo} width={100} height={100} alt="logo" />

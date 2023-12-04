@@ -1,12 +1,21 @@
+import LatestNews from "@/components/ui/LatestNews/LatestNews"
+import { Grid } from "@mui/material"
 
 
 
 const HomePage = () => {
   return (
-    <div>
+    <>
      
-      <h1>the news hub home page</h1>
-    </div>
+     <Grid container spacing={2}>
+        <Grid item xs={8}>
+          <LatestNews/>
+        </Grid>
+        <Grid item xs={4}>
+            <h1>sidebar</h1>
+        </Grid>
+      </Grid>
+    </>
   )
 }
 

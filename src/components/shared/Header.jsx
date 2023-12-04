@@ -19,7 +19,7 @@ const Header = () => {
         <Typography
           fontWeight="bold"
           marginTop="10px"
-          variant="body1"
+          variant="body2"
           color="gray"
           textAlign="center"
         >
@@ -27,7 +27,8 @@ const Header = () => {
         </Typography>
         <Typography
           marginBottom="15px"
-          variant="body2"
+          marginTop="6px"
+          variant="body1"
           color="gray"
           textAlign="center"
         >
