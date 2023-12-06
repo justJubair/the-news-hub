@@ -17,7 +17,7 @@ const DynamicNewsPage = async ({ searchParams }) => {
   return (
     <div>
       <h3 className="font-bold">{searchParams.category.toUpperCase()}</h3>
-      <Box className="my-10">
+      <Box>
         <Grid
           className="mt-2"
           container
@@ -29,13 +29,18 @@ const DynamicNewsPage = async ({ searchParams }) => {
           {newsCards.map((newsCard) => (
             <Grid key={newsCard._id} item xs={6}>
               <Card>
-                <CardMedia>
+                <CardMedia
+                  sx={{
+                    "& img": {
+                      width: "100%",
+                      height: "250px",
+                      objectFit: "cover",
+                    },
+                  }}
+                >
                   <Image
                     width={400}
                     height={100}
-                    style={{
-                      objectFit: "cover",
-                    }}
                     src={newsCard?.thumbnail_url}
                     alt={newsCard.title}
                   />
@@ -51,14 +56,14 @@ const DynamicNewsPage = async ({ searchParams }) => {
                     marginTop={2}
                     component="div"
                   >
-                    {newsCard?.title}
+                    {newsCard?.title.length>30 ? newsCard?.title.slice(0,30)+ '...' : newsCard?.title}
                   </Typography>
                   <Typography gutterBottom>
                     By {newsCard?.author?.name} -{" "}
                     {newsCard?.author?.published_date}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    {`${newsCard?.details.slice(0, 250)}...`}
+                    {newsCard?.details.length>200 ? newsCard?.details.slice(0,200)+"..." : newsCard?.details}
                   </Typography>
                 </CardContent>
               </Card>
