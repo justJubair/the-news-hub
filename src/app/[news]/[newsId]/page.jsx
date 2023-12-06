@@ -33,7 +33,7 @@ const NewsDetailPage = async ({ params }) => {
                     {singleNews.details}
                 </Typography>
                 <Typography variant="h6" fontWeight={600} marginTop={2}>``Many desktop publishing packages and web page editors now use as their default model text!</Typography>
-                <Typography variant="caption" color={"gray"}>-- {singleNews.author.name}</Typography>
+                <Typography variant="caption" color={"gray"}>- {singleNews.author.name}</Typography>
             </Box>
           </Grid>
         </Grid>
