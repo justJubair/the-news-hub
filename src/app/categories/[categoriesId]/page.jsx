@@ -8,6 +8,7 @@ import {
   Typography,
 } from "@mui/material";
 import Image from "next/image";
+import Link from "next/link";
 
 const DynamicNewsPage = async ({ searchParams }) => {
   const { data: newsCards } = await getSingleCategoryNews(
@@ -28,7 +29,8 @@ const DynamicNewsPage = async ({ searchParams }) => {
 
           {newsCards.map((newsCard) => (
             <Grid key={newsCard._id} item xs={6}>
-              <Card>
+            <Link href={`/${newsCard.category.toLowerCase()}/${newsCard._id}`}>
+            <Card>
                 <CardMedia
                   sx={{
                     "& img": {
@@ -67,6 +69,7 @@ const DynamicNewsPage = async ({ searchParams }) => {
                   </Typography>
                 </CardContent>
               </Card>
+            </Link>
             </Grid>
           ))}
         </Grid>
