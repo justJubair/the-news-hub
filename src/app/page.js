@@ -8,7 +8,7 @@ const HomePage = () => {
   return (
     <>
      
-     <Grid marginY="20px" container spacing={2}>
+     <Grid marginY="20px" container spacing={4}>
         <Grid item xs={8}>
           <LatestNews/>
         </Grid>
