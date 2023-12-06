@@ -34,7 +34,7 @@ const navLinks = [
 ];
 const Footer = () => {
   return (
-    <Box className="px-4 py-8 bg-[#300808]">
+    <Box className="mt-36 px-4 py-8 bg-[#300808]">
       {/* icons */}
       <Box
         className="w-full text-center"

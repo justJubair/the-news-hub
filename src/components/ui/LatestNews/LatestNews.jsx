@@ -41,7 +41,7 @@ const LatestNews = () => {
         </CardContent>
       </Card>
       {/* four news card section */}
-      <Grid container rowSpacing={4} columnSpacing={{ xs: 1, sm: 2, md: 4 }}>
+      <Grid className="mt-2" container rowSpacing={4} columnSpacing={{ xs: 1, sm: 2, md: 4 }}>
         {/* Card one */}
         <Grid item xs={6}>
           <Card>
