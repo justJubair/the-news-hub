@@ -26,7 +26,7 @@ const navLinks = [
     },
     {
         route: "Category",
-        pathname: "/categories/news"
+        pathname: "/categories/news?category=all-news"
     },
     {
         route: "News",
